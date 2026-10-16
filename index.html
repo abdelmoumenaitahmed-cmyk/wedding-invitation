@@ -26,7 +26,6 @@
 
         /* Hero Section */
         .hero {
-            /* Remplacez l'URL ci-dessous par l'image de fond de votre choix */
             background: linear-gradient(rgba(90, 74, 74, 0.4), rgba(90, 74, 74, 0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80') center/cover;
             color: var(--white);
             padding: 150px 20px;
@@ -49,6 +48,7 @@
             font-size: 4.5rem;
             margin: 10px 0;
             font-weight: normal;
+            line-height: 1.1;
         }
 
         .countdown {
@@ -92,7 +92,7 @@
             max-width: 800px;
             margin: 0 auto 30px auto;
             line-height: 1.8;
-            direction: rtl; /* Lecture de droite à gauche */
+            direction: rtl;
         }
 
         .intro p {
@@ -200,13 +200,14 @@
             border: none;
             cursor: pointer;
             margin-top: 20px;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .btn:hover {
             background-color: #8c6767;
         }
 
-        /* Section RSVP */
+        /* Section Laissez un mot */
         .rsvp {
             background-color: var(--white);
             padding: 80px 20px;
@@ -219,11 +220,56 @@
             font-weight: 300;
         }
 
+        /* Styles du Formulaire */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: var(--bg-pink);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: var(--white);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 3.5rem; }
             .names { font-size: 3rem; }
             .schedule-grid { gap: 30px; flex-direction: column; }
             .quran-verse { font-size: 1.4rem; padding: 0 15px; }
+            .form-container { padding: 20px; margin: 0 15px; }
         }
     </style>
 </head>
@@ -232,7 +278,7 @@
     <!-- Accueil -->
     <header class="hero">
         <h3>INVITATION DE MARIAGE</h3>
-        <h1>Safya et Abdelmoumen</h1>
+        <h1>Safya <br><span style="font-size: 0.6em; display: inline-block; margin: 10px 0;">&</span><br> Abdelmoumen</h1>
         <p>Samedi 07 Novembre 2026 | Kénitra</p>
         
         <div class="countdown" id="countdown">
@@ -247,7 +293,6 @@
     <section class="intro">
         <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
         
-        <!-- Verset ajouté ici avec direction rtl (Right to Left) -->
         <div class="quran-verse">
             وَمِنْ ءَايَاتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَّرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
         </div>
@@ -288,29 +333,38 @@
         <p><strong>Complexe Marmara</strong><br>Rue N°4, Kénitra 14000</p>
         
         <div class="map-container">
-            <!-- Carte Google Maps intégrée visuellement -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.6517173822184!2d-6.4996652!3d34.2932162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7571d2fdb57a3%3A0x985e5202d5876a4e!2sComplexe%20Marmara!5e0!3m2!1sfr!2sma!4v1700000000000!5m2!1sfr!2sma" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         
-        <!-- Lien exact fourni vers l'itinéraire Google Maps -->
         <a href="https://www.google.com/maps/dir//Complexe+Marmara,+Rue+N%C2%B04,+K%C3%A9nitra+14000/@34.2932399,-6.4975734,234m/data=!3m1!1e3!4m16!1m7!3m6!1s0xda7571d2fdb57a3:0x985e5202d5876a4e!2sComplexe+Marmara!8m2!3d34.2932162!4d-6.4970903!16s%2Fg%2F11frslvqsp!4m7!1m0!1m5!1m1!1s0xda7571d2fdb57a3:0x985e5202d5876a4e!2m2!1d-6.4970959!2d34.2932215?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">Ouvrir dans Google Maps</a>
     </section>
 
-    <!-- RSVP -->
+    <!-- Laissez un mot (Formulaire) -->
     <section class="rsvp">
         <div class="floral">🌸</div>
         <br>
-        <h2 class="section-title">Confirmation de présence</h2>
-        <p>Ce serait un honneur et une grande joie pour nous si vous pouviez être présents pour nous bénir.<br>
-        Si vous êtes disponible, nous attendons votre confirmation.</p>
-        <p><em>Si vous ne pouvez pas assister à notre mariage, ce n'est pas grave, nous espérons vous revoir bientôt.<br>Prenez soin de vous !</em></p>
+        <h2 class="section-title">Laissez-nous un mot</h2>
+        <p>Votre présence, votre amour et votre soutien comptent beaucoup pour nous.<br>
+        N'hésitez pas à nous laisser un petit message pour célébrer cette journée spéciale.</p>
         
-        <a href="mailto:votre.email@exemple.com?subject=Confirmation Présence Mariage Safya et Abdelmoumen" class="btn">Confirmer ma présence</a>
+        <div class="form-container">
+            <form id="messageForm" onsubmit="envoyerMessage(event)">
+                <div class="form-group">
+                    <label for="senderName">Votre Nom et Prénom :</label>
+                    <input type="text" id="senderName" class="form-control" required placeholder="Ex: Ahmed Benali">
+                </div>
+                <div class="form-group">
+                    <label for="senderMessage">Votre Message :</label>
+                    <textarea id="senderMessage" class="form-control" required placeholder="Écrivez votre message ici..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Envoyer le message</button>
+            </form>
+        </div>
         <br><br>
         <div class="floral">🌿</div>
     </section>
 
-    <!-- Script du compte à rebours -->
+    <!-- Scripts (Compte à rebours et Formulaire) -->
     <script>
         // Date cible : 7 Novembre 2026 à 19h00
         const countDownDate = new Date("Nov 7, 2026 19:00:00").getTime();
@@ -334,6 +388,26 @@
                 document.getElementById("countdown").innerHTML = "Le grand jour est arrivé !";
             }
         }, 1000);
+
+        // Fonction pour envoyer le formulaire vers l'application e-mail
+        function envoyerMessage(event) {
+            event.preventDefault(); // Empêche le rechargement de la page
+            
+            const name = document.getElementById('senderName').value;
+            const message = document.getElementById('senderMessage').value;
+            
+            // Votre adresse e-mail
+            const email = 'abdelmoumenaitahmed@gmail.com';
+            
+            // Sujet de l'e-mail avec le nom de la personne
+            const subject = encodeURIComponent('Message de ' + name + ' - Mariage Safya et Abdelmoumen');
+            
+            // Corps de l'e-mail avec le nom et le message
+            const body = encodeURIComponent('Nom du destinataire : ' + name + '\n\nMessage :\n' + message);
+            
+            // Ouvre l'application e-mail avec les données pré-remplies
+            window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
+        }
     </script>
 </body>
 </html>
