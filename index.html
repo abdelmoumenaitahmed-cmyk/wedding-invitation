@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation de Mariage | Safya & Abdelmoumen</title>
+    <!-- Polices Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-pink: #f6ebeb;
+            --text-dark: #5a4a4a;
+            --text-light: #8a7a7a;
+            --accent: #a37c7c;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-pink);
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            /* Remplacez l'URL ci-dessous par l'image de fond de votre choix */
+            background: linear-gradient(rgba(90, 74, 74, 0.4), rgba(90, 74, 74, 0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--white);
+            padding: 150px 20px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h3 {
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+
+        .countdown-item span {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        /* Section Bismillah, Verset & Intro */
+        .intro {
+            background-color: var(--white);
+            padding: 80px 20px;
+        }
+
+        .arabic {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .quran-verse {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.8;
+            direction: rtl; /* Lecture de droite à gauche */
+        }
+
+        .intro p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: var(--accent);
+            margin: 40px 0;
+            line-height: 1.2;
+        }
+
+        .floral {
+            font-size: 2rem;
+            color: var(--accent);
+            opacity: 0.7;
+        }
+
+        /* Section Temps */
+        .schedule {
+            background-color: var(--bg-pink);
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .schedule-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .date-box {
+            font-size: 1.2rem;
+        }
+
+        .date-box .day {
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1;
+            margin: 10px 0;
+        }
+
+        .time-box {
+            text-align: center;
+        }
+
+        .time-box h4 {
+            margin: 0 0 5px 0;
+            font-weight: 400;
+        }
+
+        .time-box p {
+            margin: 0 0 20px 0;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Section Emplacement */
+        .location {
+            background-color: var(--bg-pink);
+            padding: 40px 20px 80px;
+        }
+
+        .map-container {
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #8c6767;
+        }
+
+        /* Section RSVP */
+        .rsvp {
+            background-color: var(--white);
+            padding: 80px 20px;
+        }
+
+        .rsvp p {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+            .names { font-size: 3rem; }
+            .schedule-grid { gap: 30px; flex-direction: column; }
+            .quran-verse { font-size: 1.4rem; padding: 0 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Accueil -->
+    <header class="hero">
+        <h3>INVITATION DE MARIAGE</h3>
+        <h1>Safya et Abdelmoumen</h1>
+        <p>Samedi 07 Novembre 2026 | Kénitra</p>
+        
+        <div class="countdown" id="countdown">
+            <div class="countdown-item"><span id="days">00</span> Jours</div>
+            <div class="countdown-item"><span id="hours">00</span> Heures</div>
+            <div class="countdown-item"><span id="minutes">00</span> Minutes</div>
+            <div class="countdown-item"><span id="seconds">00</span> Secondes</div>
+        </div>
+    </header>
+
+    <!-- Introduction, Bismillah & Verset -->
+    <section class="intro">
+        <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+        
+        <!-- Verset ajouté ici avec direction rtl (Right to Left) -->
+        <div class="quran-verse">
+            وَمِنْ ءَايَاتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَّرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+        </div>
+
+        <p>Que la paix, la miséricorde et les bénédictions d'Allah soient sur vous.<br>
+        C'est en implorant la miséricorde et les bénédictions d'Allah (SWT) que nous avons l'immense joie de vous inviter à célébrer notre union.</p>
+        
+        <div class="names">
+            Safya<br>
+            &<br>
+            Abdelmoumen
+        </div>
+        <div class="floral">🌿</div>
+    </section>
+
+    <!-- Horaires -->
+    <section class="schedule">
+        <h2 class="section-title">Temps</h2>
+        <div class="schedule-grid">
+            <div class="date-box">
+                <div>Samedi</div>
+                <div class="day">07</div>
+                <div>Novembre 2026</div>
+            </div>
+            
+            <div class="time-box">
+                <h4>Début de la cérémonie :</h4>
+                <p>19h00</p>
+                <h4>Entrée de la mariée :</h4>
+                <p>21h00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emplacement -->
+    <section class="location">
+        <h2 class="section-title">Emplacement</h2>
+        <p><strong>Complexe Marmara</strong><br>Rue N°4, Kénitra 14000</p>
+        
+        <div class="map-container">
+            <!-- Carte Google Maps intégrée visuellement -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.6517173822184!2d-6.4996652!3d34.2932162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7571d2fdb57a3%3A0x985e5202d5876a4e!2sComplexe%20Marmara!5e0!3m2!1sfr!2sma!4v1700000000000!5m2!1sfr!2sma" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <!-- Lien exact fourni vers l'itinéraire Google Maps -->
+        <a href="https://www.google.com/maps/dir//Complexe+Marmara,+Rue+N%C2%B04,+K%C3%A9nitra+14000/@34.2932399,-6.4975734,234m/data=!3m1!1e3!4m16!1m7!3m6!1s0xda7571d2fdb57a3:0x985e5202d5876a4e!2sComplexe+Marmara!8m2!3d34.2932162!4d-6.4970903!16s%2Fg%2F11frslvqsp!4m7!1m0!1m5!1m1!1s0xda7571d2fdb57a3:0x985e5202d5876a4e!2m2!1d-6.4970959!2d34.2932215?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">Ouvrir dans Google Maps</a>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp">
+        <div class="floral">🌸</div>
+        <br>
+        <h2 class="section-title">Confirmation de présence</h2>
+        <p>Ce serait un honneur et une grande joie pour nous si vous pouviez être présents pour nous bénir.<br>
+        Si vous êtes disponible, nous attendons votre confirmation.</p>
+        <p><em>Si vous ne pouvez pas assister à notre mariage, ce n'est pas grave, nous espérons vous revoir bientôt.<br>Prenez soin de vous !</em></p>
+        
+        <a href="mailto:votre.email@exemple.com?subject=Confirmation Présence Mariage Safya et Abdelmoumen" class="btn">Confirmer ma présence</a>
+        <br><br>
+        <div class="floral">🌿</div>
+    </section>
+
+    <!-- Script du compte à rebours -->
+    <script>
+        // Date cible : 7 Novembre 2026 à 19h00
+        const countDownDate = new Date("Nov 7, 2026 19:00:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Le grand jour est arrivé !";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
